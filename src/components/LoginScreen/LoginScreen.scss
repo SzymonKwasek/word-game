@@ -1,0 +1,11 @@
+.login-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+}

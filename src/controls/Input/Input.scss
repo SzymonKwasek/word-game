@@ -1,0 +1,35 @@
+.input-wrapper {
+    position: relative;
+}
+
+.input {
+    margin-bottom: 3rem;
+    border: 2px solid gray;
+    border-radius: 3px;
+    padding: 1.5rem 1rem;
+    color: black;
+    outline: none;
+    width: 25rem;
+
+    &:active, &:focus {
+        border-color: rgb(181, 223, 169);
+    }
+
+    &--error {
+        border-color: red;
+
+        &:active, &:focus {
+            border-color: rgb(168, 117, 101);
+        }
+    }
+
+    &__validation {
+        position: absolute;
+        top: 5rem;
+        left: .1rem;
+        &--error {
+            color: red;
+        }
+    }
+}
+

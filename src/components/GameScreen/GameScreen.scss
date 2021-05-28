@@ -1,0 +1,63 @@
+.game-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__panel {
+        width: 40rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2rem;
+        border: 1px solid black;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+    }
+
+    .word {
+        border: none;
+        color: black;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem;
+        &:hover {
+            color: gray;
+        }
+
+        &--checked {
+            color: gray;
+        }
+
+        &--correct {
+            color: lightgreen;
+            &::before {
+                content: "Good";
+                color: green;
+                position: absolute;
+                top: -10px;
+                font-size: 1.2rem;
+            }
+        }
+
+        &--incorrect {
+            color: lightcoral;
+            &::before {
+                content: "Bad";
+                color: red;
+                position: absolute;
+                top: -10px;
+                font-size: 1.2rem;
+            }
+        }
+
+    }
+}
