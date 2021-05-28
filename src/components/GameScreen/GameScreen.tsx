@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import Button from "../../controls/Button/Button";
 import { GameContext } from "../Game";
+// import { GetData } from "../../static/data";
 import "./GameScreen.scss";
 
 interface IGameData {
@@ -16,6 +17,8 @@ const GameScreen = () => {
     const [ShowAnswers, setShowAnswers] = useState<boolean>(false);
 
     useEffect(() => {
+        // const data = GetData();
+        // setGameData(data);
         fetch('http://localhost:8000/get-questions')
             .then(res => res.json())
             .then(data => setGameData(data));
