@@ -71,3 +71,27 @@
 
     }
 }
+
+.game-screen .game-screen__panel {
+    &--disabled {
+        .word {
+            cursor: default;
+
+            &:hover {
+                color: black;
+            }
+
+            &--correct {
+                &:hover {
+                    color: lightgreen;
+                }
+            }
+
+            &--incorrect {
+                    &:hover {
+                    color: lightcoral;
+                }
+            }
+        }
+    }
+}
